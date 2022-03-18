@@ -1,0 +1,9 @@
+const PessoaSchema = new mongoose.Schema({
+    nome: { type: String, required: true },
+    email: { type: String},
+    cidade: { 
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Cidade', 
+        require: true, 
+    }
+});

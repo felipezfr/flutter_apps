@@ -1,0 +1,44 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/atividades
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/atividades
+Content-Type: application/json
+
+{
+  "titulo": "Permitir editar projetos",
+  "descricao": "Descricao",
+  "dataInicio": "2021-10-06T03:00:00.000Z",
+  "dataTermino": "2021-10-06T03:00:00.000Z",
+  "responsavel" : "612831004576432f4084643f",
+  "projeto" : "619fd666c6099b210048c05a"
+} 
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/atividades
+Content-Type: application/json
+
+{
+ "_id": "612830ef4576432f40846439",
+ "nome": "beltrano alterado",
+ "email": "beltrano@teste.com",
+ "celular": "54 6543 2423"
+}
+###
+# Excluir um usuário
+DELETE http://localhost:3000/api/atividades/6131173ba7cfa51f34754a81
+Content-Type: application/json
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/atividades/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/atividades/filtro/619fd666c6099b210048c05a
+Content-Type: application/json
+###
+
+

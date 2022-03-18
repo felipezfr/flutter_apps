@@ -1,0 +1,60 @@
+@apiUrl = http://localhost:3000/api/projetos
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI4MzEwMDQ1NzY0MzJmNDA4NDY0M2YiLCJub21lIjoiRmVsaXBlIFphZmZhcmkiLCJpYXQiOjE2MzEyMDcyOTEsImV4cCI6MTYzMTIxMDg5MX0.ntK0Ds3MU9Pwb9bjjQW-LxApxjDVF50or1T6UmLgh0Q
+
+
+# Obter a lista de usuários
+GET http://localhost:3000/api/projetos
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/projetos
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+
+{
+  "titulo": "Projeto teste",
+  "descricao": "teste descricao",
+  "dataInicio": "02/09/2021",
+  "DataTermino": "05/09/2021",
+  "nomeDemandante": "Fulano",
+  "responsavel" : "612831004576432f4084643f"
+} 
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/projetos
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+
+{
+ "_id": "612830ef4576432f40846439",
+ "nome": "beltrano alterado",
+ "email": "beltrano@teste.com",
+ "celular": "54 6543 2423"
+}
+###
+# Excluir um usuário
+DELETE http://localhost:3000/api/projetos/612830ef4576432f40846439
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/projetos/612830ef4576432f40846439
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/projetos/filtro/Felipe
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+###
+
+

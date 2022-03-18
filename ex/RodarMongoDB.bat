@@ -1,0 +1,1 @@
+mongod --port 27017 --dbpath C:\Users\ipizf\Documents\Desinvolvimento_web_mobile\ex\mongo --auth

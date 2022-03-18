@@ -1,0 +1,48 @@
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI4MzEwMDQ1NzY0MzJmNDA4NDY0M2YiLCJub21lIjoiRmVsaXBlIFphZmZhcmkiLCJpYXQiOjE2MzEyMDcyOTEsImV4cCI6MTYzMTIxMDg5MX0.ntK0Ds3MU9Pwb9bjjQW-LxApxjDVF50or1T6UmLgh0Q
+
+# Obter a lista de usuários
+GET http://localhost:3000/api/colaboradores
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/colaboradores
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+
+{
+   "projeto" : "61311438a7cfa51f34754a73",
+   "usuario" : "612831004576432f4084643f"
+} 
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/colaboradores
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+
+{
+ "_id": "612830ef4576432f40846439",
+ "nome": "beltrano alterado",
+ "email": "beltrano@teste.com",
+ "celular": "54 6543 2423"
+}
+###
+# Excluir um usuário
+DELETE http://localhost:3000/api/colaboradores/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/colaboradores/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/colaboradores/filtro/Felipe
+Content-Type: application/json
+###
+
+

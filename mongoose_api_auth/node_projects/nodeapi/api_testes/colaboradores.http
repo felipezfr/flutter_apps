@@ -1,0 +1,39 @@
+# Obter a lista de usuários
+GET http://localhost:3000/api/colaboradores
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/colaboradores
+Content-Type: application/json
+
+{
+   "projeto" : "6154df081712383c64bfd4e6",
+   "usuario" : "612831004576432f4084643f"
+} 
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/colaboradores
+Content-Type: application/json
+
+{
+ "_id" : "615f8b12bf809a04a83af2e6",
+ "projeto" : "6154df081712383c64bfd4e6",
+ "usuario" : "61394d35bced1d3f7886442a"
+}
+###
+# Excluir um usuário
+DELETE http://localhost:3000/api/colaboradores/615f376f0196a10a0062569f
+Content-Type: application/json
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/colaboradores/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/colaboradores/filtro/Felipe
+Content-Type: application/json
+###
+
+

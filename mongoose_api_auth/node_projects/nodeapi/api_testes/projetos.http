@@ -1,0 +1,65 @@
+@apiUrl = http://localhost:3000/api/projetos
+
+# Obter a lista de usuários
+GET http://localhost:3000/api/projetos
+Content-Type: application/json
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/projetos
+Content-Type: application/json
+
+{
+  "titulo": "Projeto Flutter",
+  "descricao": "Listando descricao",
+  "dataInicio": "02/09/2021",
+  "DataTermino": "05/09/2021",
+  "nomeDemandante": "Chefe",
+  "responsavel" : "612831004576432f4084643f"
+} 
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/projetos
+Content-Type: application/json
+
+{
+ "_id": "6153b80ad83cfe3c94efde08",
+  "titulo": "Desenvolvimento 1",
+  "descricao": "Listando descricao 2",
+  "dataInicio": "02/09/2021",
+  "DataTermino": "05/09/2021",
+  "nomeDemandante": "Matheus",
+  "responsavel" : "61394d35bced1d3f7886442a"
+}
+
+###
+# Alterar responsavel
+PUT http://localhost:3000/api/projetos
+Content-Type: application/json
+
+{
+  "_id": "615f36060196a10a0062565a",
+  "responsavel" : "612831004576432f4084643f"
+}
+###
+
+# Excluir um usuário
+DELETE http://localhost:3000/api/projetos/6154ddf91712383c64bfd4cd
+Content-Type: application/json
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/projetos/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/projetos/filtro/
+Content-Type: application/json
+###
+
+
+GET http://localhost:3000/api/projetos/listar/612831004576432f4084643f
+Content-Type: application/json
+###
+
+

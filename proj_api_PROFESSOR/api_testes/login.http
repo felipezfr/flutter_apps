@@ -1,0 +1,11 @@
+@apiUrl = http://localhost:3000/api
+
+# Autenticação de usuário
+POST {{apiUrl}}/login
+Content-Type: application/json
+
+{
+ "email": "felipe@upf.br",
+ "senha": "123"
+}
+###

@@ -1,0 +1,60 @@
+@authToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTI4MzEwMDQ1NzY0MzJmNDA4NDY0M2YiLCJub21lIjoiRmVsaXBlIFphZmZhcmkiLCJpYXQiOjE2MzEyMDcyOTEsImV4cCI6MTYzMTIxMDg5MX0.ntK0Ds3MU9Pwb9bjjQW-LxApxjDVF50or1T6UmLgh0Q
+
+
+# Obter a lista de usuários
+GET http://localhost:3000/api/usuarios
+Content-Type: application/json
+x-auth-token: {{authToken}}
+###
+
+# Inserir novo usuário
+POST http://localhost:3000/api/usuarios
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+{
+ "nome": "Matheus Zaffari", "email": "mat@upf.br",
+ "celular": "99999-9999", "senha": "123",
+ "dataHoraCad": "2021-01-25T17:32:25.000Z"
+} 
+###
+
+# Alterar senha de usuário
+PUT http://localhost:3000/api/usuarios/alterarSenha
+Content-Type: application/json
+
+{
+ "_id": "612831004576432f4084643f",
+ "nome": "Felipe Zaffari",
+ "email": "felipe@upf.br",
+ "celular": "99999-8888",
+ "senha": "123",
+ "dataHoraCad": "2020-01-01T03:00:00.000Z"
+}
+###
+
+# Alterar usuário
+PUT http://localhost:3000/api/usuarios
+Content-Type: application/json
+
+{
+ "_id": "612830ef4576432f40846439",
+ "nome": "beltrano alterado",
+ "email": "beltrano@teste.com",
+ "celular": "54 6543 2423"
+}
+###
+# Excluir um usuário
+DELETE http://localhost:3000/api/usuarios/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter pelo id de usuário
+GET http://localhost:3000/api/usuarios/612830ef4576432f40846439
+Content-Type: application/json
+###
+# Obter usuários filtrando
+GET http://localhost:3000/api/usuarios/filtro/Felipe
+Content-Type: application/json
+###
+
+
